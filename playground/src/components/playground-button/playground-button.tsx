@@ -11,10 +11,13 @@ import { usePlaygroundButton } from './usePlaygroundButton';
 })
 export class PlaygroundButton {
   @Prop() text: string;
+  @Prop() type: string = 'primary';
 
   constructor() {
     withHooks(this);
   }
+
+  disconnectedCallback() {}
 
   render() {
     const props = usePlaygroundButton(getProps(this));

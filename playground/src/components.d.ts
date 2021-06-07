@@ -8,6 +8,10 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface PlaygroundButton {
         "text": string;
+        "type": string;
+    }
+    interface PlaygroundModal {
+        "content": string;
     }
 }
 declare global {
@@ -17,16 +21,28 @@ declare global {
         prototype: HTMLPlaygroundButtonElement;
         new (): HTMLPlaygroundButtonElement;
     };
+    interface HTMLPlaygroundModalElement extends Components.PlaygroundModal, HTMLStencilElement {
+    }
+    var HTMLPlaygroundModalElement: {
+        prototype: HTMLPlaygroundModalElement;
+        new (): HTMLPlaygroundModalElement;
+    };
     interface HTMLElementTagNameMap {
         "playground-button": HTMLPlaygroundButtonElement;
+        "playground-modal": HTMLPlaygroundModalElement;
     }
 }
 declare namespace LocalJSX {
     interface PlaygroundButton {
         "text"?: string;
+        "type"?: string;
+    }
+    interface PlaygroundModal {
+        "content"?: string;
     }
     interface IntrinsicElements {
         "playground-button": PlaygroundButton;
+        "playground-modal": PlaygroundModal;
     }
 }
 export { LocalJSX as JSX };
@@ -34,6 +50,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "playground-button": LocalJSX.PlaygroundButton & JSXBase.HTMLAttributes<HTMLPlaygroundButtonElement>;
+            "playground-modal": LocalJSX.PlaygroundModal & JSXBase.HTMLAttributes<HTMLPlaygroundModalElement>;
         }
     }
 }

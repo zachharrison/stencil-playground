@@ -29,3 +29,20 @@
   More info about color theming using Ionic:
   https://ionicframework.com/docs/theming/color-generator
 */
+
+:root {
+  --primary-color: #ed711f;
+  --secondary-color: #40b5e0;
+  --light-color: #eee;
+  --dark-color: #333;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mt-3 {
+  margin-top: 3rem;
+}
