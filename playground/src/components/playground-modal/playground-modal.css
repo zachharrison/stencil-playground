@@ -23,6 +23,8 @@
   transform: translate(-50%, -50%);
   width: 50vw;
   height: 50vh;
+  animation-name: modalopen;
+  animation-duration: 1s;
 }
 
 .close {
@@ -53,4 +55,14 @@
   color: var(--dark-color);
   padding: 20px;
   text-align: center;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
