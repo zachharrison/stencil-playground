@@ -1,3 +1,56 @@
-:host {
+.overlay {
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.overlay.show {
   display: block;
+}
+
+.modal {
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 0 10px var(--secondary-color);
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50vw;
+  height: 50vh;
+}
+
+.close {
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 18px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 10px;
+  margin-right: 10px;
+  background: transparent;
+  outline: none;
+  border: none;
+}
+
+.close:hover {
+  cursor: pointer;
+}
+
+.modal-header {
+  color: var(--dark-color);
+  text-align: center;
+  padding: 15px;
+}
+
+.modal-content {
+  color: var(--dark-color);
+  padding: 20px;
+  text-align: center;
 }

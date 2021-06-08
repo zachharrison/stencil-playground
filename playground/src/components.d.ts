@@ -12,6 +12,7 @@ export namespace Components {
     }
     interface PlaygroundModal {
         "content": string;
+        "modalTitle": string;
     }
 }
 declare global {
@@ -39,6 +40,7 @@ declare namespace LocalJSX {
     }
     interface PlaygroundModal {
         "content"?: string;
+        "modalTitle"?: string;
     }
     interface IntrinsicElements {
         "playground-button": PlaygroundButton;

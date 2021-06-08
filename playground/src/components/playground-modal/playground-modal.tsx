@@ -10,6 +10,7 @@ import { usePlaygroundModal } from './usePlaygroundModal';
   shadow: true,
 })
 export class PlaygroundModal {
+  @Prop() modalTitle: string;
   @Prop() content: string;
 
   constructor() {
