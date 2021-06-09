@@ -12,7 +12,8 @@ import { usePlaygroundCounter } from './usePlaygroundCounter';
 export class PlaygroundCounter {
   @Prop() background: string = 'primary';
   @Prop() startCount: number = 0;
-
+  @Prop() incrementBy: number = 1;
+  @Prop() decrementBy: number = 1;
   constructor() {
     withHooks(this);
   }

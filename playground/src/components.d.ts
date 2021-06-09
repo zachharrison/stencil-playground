@@ -12,6 +12,8 @@ export namespace Components {
     }
     interface PlaygroundCounter {
         "background": string;
+        "decrementBy": number;
+        "incrementBy": number;
         "startCount": number;
     }
     interface PlaygroundModal {
@@ -51,6 +53,8 @@ declare namespace LocalJSX {
     }
     interface PlaygroundCounter {
         "background"?: string;
+        "decrementBy"?: number;
+        "incrementBy"?: number;
         "startCount"?: number;
     }
     interface PlaygroundModal {
