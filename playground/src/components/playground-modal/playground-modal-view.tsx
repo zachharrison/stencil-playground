@@ -12,7 +12,7 @@ export function PlaygroundModalView(props: PlaygroundModalViewProps) {
   const { modalTitle, content, isOpen, openModal, closeModal } = props;
 
   return (
-    <div>
+    <div class="mb-5">
       <playground-button text="Open Modal" type="dark" onClick={openModal}></playground-button>
       <div class={`overlay ${isOpen ? 'show' : ''}`} onClick={e => closeModal(e)}>
         <div class="modal" ref={(modal: HTMLDivElement) => modal}>

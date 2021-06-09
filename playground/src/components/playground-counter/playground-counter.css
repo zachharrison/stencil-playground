@@ -1,0 +1,18 @@
+.background-primary {
+  background: var(--secondary-color);
+  width: 60vw;
+  height: 30vh;
+  border-radius: 12px;
+}
+
+.counter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.count {
+  font-size: 60px;
+  color: var(--primary-color);
+}

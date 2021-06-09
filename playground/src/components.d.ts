@@ -10,6 +10,10 @@ export namespace Components {
         "text": string;
         "type": string;
     }
+    interface PlaygroundCounter {
+        "background": string;
+        "startCount": number;
+    }
     interface PlaygroundModal {
         "content": string;
         "modalTitle": string;
@@ -22,6 +26,12 @@ declare global {
         prototype: HTMLPlaygroundButtonElement;
         new (): HTMLPlaygroundButtonElement;
     };
+    interface HTMLPlaygroundCounterElement extends Components.PlaygroundCounter, HTMLStencilElement {
+    }
+    var HTMLPlaygroundCounterElement: {
+        prototype: HTMLPlaygroundCounterElement;
+        new (): HTMLPlaygroundCounterElement;
+    };
     interface HTMLPlaygroundModalElement extends Components.PlaygroundModal, HTMLStencilElement {
     }
     var HTMLPlaygroundModalElement: {
@@ -30,6 +40,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "playground-button": HTMLPlaygroundButtonElement;
+        "playground-counter": HTMLPlaygroundCounterElement;
         "playground-modal": HTMLPlaygroundModalElement;
     }
 }
@@ -38,12 +49,17 @@ declare namespace LocalJSX {
         "text"?: string;
         "type"?: string;
     }
+    interface PlaygroundCounter {
+        "background"?: string;
+        "startCount"?: number;
+    }
     interface PlaygroundModal {
         "content"?: string;
         "modalTitle"?: string;
     }
     interface IntrinsicElements {
         "playground-button": PlaygroundButton;
+        "playground-counter": PlaygroundCounter;
         "playground-modal": PlaygroundModal;
     }
 }
@@ -52,6 +68,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "playground-button": LocalJSX.PlaygroundButton & JSXBase.HTMLAttributes<HTMLPlaygroundButtonElement>;
+            "playground-counter": LocalJSX.PlaygroundCounter & JSXBase.HTMLAttributes<HTMLPlaygroundCounterElement>;
             "playground-modal": LocalJSX.PlaygroundModal & JSXBase.HTMLAttributes<HTMLPlaygroundModalElement>;
         }
     }
