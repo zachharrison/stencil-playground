@@ -2,17 +2,19 @@ import { h } from '@stencil/core';
 
 export interface PlaygroundCounterViewProps {
   background?: string;
-  startCount?: number;
+  count: number;
+  increment: () => void;
+  decrement: () => void;
 }
 
 export function PlaygroundCounterView(props: PlaygroundCounterViewProps) {
-  const { background, startCount } = props;
+  const { background, count, increment, decrement } = props;
   return (
     <div class={`counter-container background-${background}`}>
-      <h1 class="count">{startCount}</h1>
+      <h1 class="count">{count}</h1>
       <div class="flex-center">
-        <playground-button text="Increment" type="primary"></playground-button>
-        <playground-button text="Decrement" type="dark"></playground-button>
+        <playground-button onClick={increment} text="Increment" type="primary"></playground-button>
+        <playground-button onClick={decrement} text="Decrement" type="dark"></playground-button>
       </div>
     </div>
   );
