@@ -1,8 +1,11 @@
 .background-primary {
+  background: var(--primary-color);
+  color: var(--light-color);
+}
+
+.background-secondary {
   background: var(--secondary-color);
-  width: 60vw;
-  height: 30vh;
-  border-radius: 12px;
+  color: var(--primary-color);
 }
 
 .counter-container {
@@ -10,9 +13,12 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 60vw;
+  height: 30vh;
+  border-radius: 12px;
+  margin: 2rem 0;
 }
 
 .count {
   font-size: 60px;
-  color: var(--primary-color);
 }
